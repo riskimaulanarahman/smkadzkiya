@@ -15,7 +15,7 @@
 			<span class="icon-bar"></span>
 		</button>
 		@endif
-		<a href="/" class="navbar-brand"><b>SURVEYOR</b></a>
+		<a href="/" class="navbar-brand"><b>SMK ADZKIYA</b></a>
 		@if ($headerMegaMenu)
 			<button type="button" class="navbar-toggle pt-0 pb-0 mr-0" data-toggle="collapse" data-target="#top-navbar">
 				<span class="fa-stack fa-lg text-inverse">
@@ -83,6 +83,7 @@
 				<span class="d-none d-md-inline">{{ Auth::user()->nama_lengkap }} </span> <b class="caret"></b>
 			</a>
 			<input type="hidden" class="roleuser" value="{{Auth::user()->role}}">
+			{{-- <input type="hidden" class="rolenama" value="{{Auth::user()->nama_lengkap}}"> --}}
 			<div class="dropdown-menu dropdown-menu-right">
 				{{-- <a href="javascript:;" class="dropdown-item">Edit Profile</a> --}}
 				<a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">{{Auth::user()->role}}</span> Role</a>

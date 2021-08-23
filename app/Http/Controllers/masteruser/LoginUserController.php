@@ -38,16 +38,18 @@ class LoginUserController extends Controller
 
         try {
             $validator = $request->validate([
-                'npo' => 'required | unique:users',
+                'nis' => 'required | unique:users',
                 'email' => 'required | unique:users',
             ]);
 
             $data = User::create([
                 'nama_lengkap' => $request->nama_lengkap,
-                'npo' => $request->npo,
+                'nis' => $request->nis,
+                'id_kelas' => $request->id_kelas,
+                'id_jurusan' => $request->id_jurusan,
+                'id_tahunajaran' => $request->id_tahunajaran,
                 'email' => $request->email,
                 'password' => bcrypt($request->password),
-                'pass_txt' => $request->password,
                 'role' => $request->role,
             ]);
 
@@ -87,7 +89,6 @@ class LoginUserController extends Controller
 
             if(!empty($request->password)) {
                 $data->password = bcrypt($request->password);
-                $data->pass_txt = $request->password;
                 $data->save();
             }
         
@@ -110,7 +111,12 @@ class LoginUserController extends Controller
     {
         try {
             $data = User::findOrFail($id);
-            $data->delete();
+
+            if($data->role == 'admin') {
+                return response()->json(["status" => "error", "message" => "Admin Tidak Bisa Di Hapus"]);
+            } else {
+                $data->delete();
+            }
 
             return response()->json(["status" => "success", "message" => "Berhasil Hapus Data"]);
 

@@ -21,15 +21,34 @@ return [
         // ],
         [
                 'icon' => 'fa fa-folder',
-                'title' => 'Master Data',
+                'title' => 'Data Siswa',
                 'url' => 'javascript:;',
                 'caret' => true,
                 'sub_menu' => [
                     [
                         'url' => '/',
-                        'title' => 'Master Data Customer',
+                        'title' => 'Daftar Ulang',
                         'route-name' => 'admin.index',
-                    ],]
+                    ]]
+            ],[
+                'icon' => 'fa fa-folder',
+                'title' => 'Master Data',
+                'url' => 'javascript:;',
+                'caret' => true,
+                'sub_menu' => [
+                    [
+                        'url' => '/master-kelas',
+                        'title' => 'Kelas',
+                        'route-name' => 'admin.kelas',
+                    ],[
+                        'url' => '/master-jurusan',
+                        'title' => 'Jurusan',
+                        'route-name' => 'admin.jurusan',
+                    ],[
+                        'url' => '/master-tahunajaran',
+                        'title' => 'Tahun Ajaran',
+                        'route-name' => 'admin.tahunajaran',
+                    ]]
             ],[
             'icon' => 'fa fa-users',
             'title' => 'Kelola User',

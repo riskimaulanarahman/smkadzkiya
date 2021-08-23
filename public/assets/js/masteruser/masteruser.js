@@ -22,7 +22,7 @@
 		});
     }
 
-    RoleType = [{id:1,roletype:"marketing"},{id:2,roletype:"fv"}];
+    RoleType = [{id:1,roletype:"siswa"}];
     // attribute
     var dataGrid = $("#master-user").dxDataGrid({    
         dataSource: store,
@@ -60,17 +60,13 @@
                     itemType: "group",
                     colCount: 2,
                     colSpan: 2,
-                    items: [
-                        {
-                            dataField: "role",
-                        },
-                    ]
+                    items: ["nis","id_kelas","id_jurusan","id_tahunajaran"]
                 }, {
                     itemType: "group",
                     colCount: 2,
                     colSpan: 2,
                     caption: "Login Info",
-                    items: ["npo","nama_lengkap","email","password"]
+                    items: ["role","nama_lengkap","email","password"]
                 }]
             }
         },
@@ -89,7 +85,7 @@
                 }
             },
             { 
-                dataField: "npo",
+                dataField: "nis",
                 validationRules: [
                     { type: "required" }
                 ]
@@ -102,11 +98,44 @@
                 ]
             },
             { 
+                caption: "Kelas",
+                dataField: "id_kelas",
+                width: 80,
+                editorType: "dxSelectBox",
+                lookup: {
+                    dataSource: listKelas,  
+                    valueExpr: 'id',
+                    displayExpr: 'nama_kelas',
+                },
+            },
+            { 
+                caption: "Jurusan",
+                dataField: "id_jurusan",
+                width: 80,
+                editorType: "dxSelectBox",
+                lookup: {
+                    dataSource: listJurusan,  
+                    valueExpr: 'id',
+                    displayExpr: 'nama_jurusan',
+                },
+            },
+            { 
+                caption: "tahunajaran",
+                dataField: "id_tahunajaran",
+                width: 80,
+                editorType: "dxSelectBox",
+                lookup: {
+                    dataSource: listTahunajaran,  
+                    valueExpr: 'id',
+                    displayExpr: 'tahun_ajaran',
+                },
+            },
+            { 
                 dataField: "password",
                 visible: false,
-                validationRules: [
-                    { type: "required" }
-                ]
+                // validationRules: [
+                //     { type: "required" }
+                // ]
             },
             { 
                 dataField: "email",

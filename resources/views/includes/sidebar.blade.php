@@ -83,10 +83,8 @@
 
 				if(Auth::user()->role == 'admin') {
 					$optmenu = 'sidebar-admin.menu';
-				} elseif(Auth::user()->role == 'marketing') {
-					$optmenu = 'sidebar-marketing.menu';
-				} elseif(Auth::user()->role == 'fv') {
-					$optmenu = 'sidebar-fv.menu';
+				} elseif(Auth::user()->role == 'siswa') {
+					$optmenu = 'sidebar-siswa.menu';
 				}
 				
 				foreach (config($optmenu) as $key => $menu) {

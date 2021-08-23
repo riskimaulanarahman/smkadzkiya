@@ -18,41 +18,16 @@ use Auth;
 class ListController extends Controller
 {
 
-    public function listSuratPelayanan() {
-
-        $data = DB::table('ref_jenis_surat_pelayanan')
-        ->select('id_jenis_surat_pelayanan','nama_jenis_surat_pelayanan')
-        ->whereNotIn('nama_jenis_surat_pelayanan',['Surat Pernyataan Ahli Waris','Surat Keterangan Cerai Ghaib','Surat Keterangan Pertanahan'])
-        ->get();
-
-        return $data;
+    public function listKelas() {
+        return DB::table('kelas')->select('id','nama_kelas')->get();
     }
 
-    public function listSuratVital() {
-        $user = Auth::user();
-
-        if($user->role == 'supervisor' && $user->jabatan == 'Kasi Pemerintahan & PP') {
-            $data = DB::table('ref_jenis_surat_pelayanan')
-            ->select('id_jenis_surat_pelayanan','nama_jenis_surat_pelayanan')
-            ->whereIn('nama_jenis_surat_pelayanan',['Surat Keterangan Pertanahan'])
-            ->get();
-        } else if($user->role == 'supervisor' && $user->jabatan == 'Kasi Pemberdayaan Masyarakat') {
-            $data = DB::table('ref_jenis_surat_pelayanan')
-            ->select('id_jenis_surat_pelayanan','nama_jenis_surat_pelayanan')
-            ->whereIn('nama_jenis_surat_pelayanan',['Surat Pernyataan Ahli Waris','Surat Keterangan Cerai Ghaib'])
-            ->get();
-        } else {
-            $data = DB::table('ref_jenis_surat_pelayanan')
-            ->select('id_jenis_surat_pelayanan','nama_jenis_surat_pelayanan')
-            ->whereIn('nama_jenis_surat_pelayanan',['Surat Pernyataan Ahli Waris','Surat Keterangan Cerai Ghaib','Surat Keterangan Pertanahan'])
-            ->get();
-        }
-
-        return $data;
+    public function listJurusan() {
+        return DB::table('jurusan')->select('id','nama_jurusan')->get();
     }
 
-    public function listJabatan() {
-        return DB::table('ref_jabatan')->select('id_jabatan','nama_jabatan')->get();
+    public function listTahunajaran() {
+        return DB::table('tahunajaran')->select('id','tahun_ajaran')->get();
     }
 
 }

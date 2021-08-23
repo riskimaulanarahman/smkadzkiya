@@ -5,7 +5,7 @@
 @section('content')
 	<!-- begin login-cover -->
 	<div class="login-cover">
-		<div class="login-cover-image" style="background-image: url(https://upperline.id/uploads/images/image_750x_KantorFIFGroup-1509997914.jpg)" data-id="login-cover-image"></div>
+		<div class="login-cover-image" style="background-image: url(https://cdn.popbela.com/content-images/post/20191227/51356679-409864469588589-9140655186189839796-n-f23dab5aa8aaef67c7b5e84e909c932a-5c031b5dceb039855b5282132f0856af.jpg)" data-id="login-cover-image"></div>
 		<div class="login-cover-bg"></div>
 	</div>
 	<!-- end login-cover -->
@@ -15,8 +15,8 @@
 		<!-- begin brand -->
 		<div class="login-header">
 			<div class="brand">
-				<span class="logo"></span> <b>FIF Group</b>
-				<small>Aplikasi Verifikasi Data Customer</small>
+				<span class=""></span> <b>SMK ADZKIA</b>
+				<small>Aplikasi Daftar Ulang Siswa</small>
 			</div>
 			<div class="icon">
 				<i class="fa fa-lock"></i>
@@ -46,7 +46,7 @@
                     @endif
 				</div>
 				<div class="login-buttons">
-					<button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
+					<button type="submit" class="btn btn-danger btn-block btn-lg">Login</button>
 				</div>
 			</form>
 		</div>
@@ -56,7 +56,7 @@
 	
 	<!-- begin login-bg -->
 	<ul class="login-bg-list clearfix">
-		<li class="active"><a href="javascript:;" data-click="change-bg" data-img="https://upperline.id/uploads/images/image_750x_KantorFIFGroup-1509997914.jpg" style="background-image: url(https://upperline.id/uploads/images/image_750x_KantorFIFGroup-1509997914.jpg)"></a></li>
+		<li class="active"><a href="javascript:;" data-click="change-bg" data-img="https://cdn.popbela.com/content-images/post/20191227/51356679-409864469588589-9140655186189839796-n-f23dab5aa8aaef67c7b5e84e909c932a-5c031b5dceb039855b5282132f0856af.jpg" style="background-image: url(https://cdn.popbela.com/content-images/post/20191227/51356679-409864469588589-9140655186189839796-n-f23dab5aa8aaef67c7b5e84e909c932a-5c031b5dceb039855b5282132f0856af.jpg)"></a></li>
 		<li><a href="javascript:;" data-click="change-bg" data-img="/assets/img/login-bg/login-bg-17.jpg" style="background-image: url(/assets/img/login-bg/login-bg-17.jpg)"></a></li>
 		<li><a href="javascript:;" data-click="change-bg" data-img="/assets/img/login-bg/login-bg-16.jpg" style="background-image: url(/assets/img/login-bg/login-bg-16.jpg)"></a></li>
 		<li><a href="javascript:;" data-click="change-bg" data-img="/assets/img/login-bg/login-bg-15.jpg" style="background-image: url(/assets/img/login-bg/login-bg-15.jpg)"></a></li>

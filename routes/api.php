@@ -17,15 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//master data surat
-// Route::apiResource('/rest/customer','CustomerController');
-Route::post('/loginandroid','masteruser\LoginAndroidController@login')->name('android.login');
-Route::get('/indexcustomer','masteruser\LoginAndroidController@indexcustomer')->name('android.indexcustomer');
-Route::get('/getcustomer/{id}','masteruser\LoginAndroidController@getcustomer')->name('android.getcustomer');
-Route::post('/updatecustomer/{id}','masteruser\LoginAndroidController@updatecustomer')->name('android.updatecustomer');
-
 
 Route::post('/upload-berkas/{id}/{module}','BerkasController@update')->name('uploadberkas');
 
 //master user
 Route::apiResource('/master-user','masteruser\LoginUserController');
+
+//list refrensi
+Route::post('list-kelas','API\ListController@listKelas');
+Route::post('list-jurusan','API\ListController@listJurusan');
+Route::post('list-tahunajaran','API\ListController@listTahunajaran');

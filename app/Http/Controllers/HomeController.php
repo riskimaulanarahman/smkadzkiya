@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index(){
         $user = Auth::user();
         
-        return view('pages/customer');
+        return view('pages/daftarulang');
            
         // if(Auth::user()->role == 'admin') {
             

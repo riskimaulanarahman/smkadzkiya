@@ -47,38 +47,6 @@
     }
         
     //get list
-    listKecamatan = {
-        store: new DevExpress.data.CustomStore({
-            key: "id_kecamatan",
-            loadMode: "raw",
-            load: function() {
-                return $.post(apiurl + "/list/zona-kecamatan");
-            }
-        }),
-        sort: "nama_kecamatann"
-    }
-    
-    listKelurahan = {
-        store: new DevExpress.data.CustomStore({
-            key: "id_kelurahan",
-            loadMode: "raw",
-            load: function() {
-                return $.post(apiurl + "/list/zona-kelurahan");
-            }
-        }),
-        sort: "nama_kelurahan"
-    }
-    
-    listLevelUser = {
-        store: new DevExpress.data.CustomStore({
-            key: "id_level",
-            loadMode: "raw",
-            load: function() {
-                return $.post(apiurl + "/list/level-user");
-            }
-        }),
-        sort: "jenis_level_user"
-    }
     
     listStatusUser = {
         store: new DevExpress.data.CustomStore({
@@ -91,37 +59,37 @@
         sort: "status_pengguna"
     }
 
-    listSuratpelayanan = {
+    listKelas = {
         store: new DevExpress.data.CustomStore({
-            key: "id_jenis_surat_pelayanan",
+            key: "id",
             loadMode: "raw",
             load: function() {
-                return $.post(apiurl + "/list-suratpelayanan"+'?_token=' + '{{ csrf_token() }}');
+                return $.post(apiurl + "/list-kelas"+'?_token=' + '{{ csrf_token() }}');
             }
         }),
-        sort: "nama_jenis_surat_pelayanan"
+        sort: "nama_kelas"
     }
 
-    listSuratvital = {
+    listJurusan = {
         store: new DevExpress.data.CustomStore({
-            key: "id_jenis_surat_pelayanan",
+            key: "id",
             loadMode: "raw",
             load: function() {
-                return $.post(apiurl + "/list-suratvital"+'?_token=' + '{{ csrf_token() }}');
+                return $.post(apiurl + "/list-jurusan"+'?_token=' + '{{ csrf_token() }}');
             }
         }),
-        sort: "nama_jenis_surat_pelayanan"
+        sort: "nama_jurusan"
     }
 
-    listJabatan = {
+    listTahunajaran = {
         store: new DevExpress.data.CustomStore({
-            key: "id_jabatan",
+            key: "id",
             loadMode: "raw",
             load: function() {
-                return $.post(apiurl + "/list-jabatan");
+                return $.post(apiurl + "/list-tahunajaran"+'?_token=' + '{{ csrf_token() }}');
             }
         }),
-        sort: "nama_jabatan"
+        sort: "tahun_ajaran"
     }
     
     
