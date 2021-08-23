@@ -152,7 +152,7 @@ $(document).ready(function(){
                     }
                 },
                 { 
-                    caption: "Nomo Daftar Ulang",
+                    caption: "Nomor Daftar Ulang",
                     dataField: "nodu",
                     width: 150,
                     formItem: {visible:(role!=="admin")?true:false},
@@ -265,7 +265,7 @@ $(document).ready(function(){
                     caption: "Print",
                     type: "buttons",
                     width: 80,
-                    buttons: [{
+                    buttons: ["edit",{
                         hint: "generate",
                         icon: "repeat",
                         onClick: function(e) {
